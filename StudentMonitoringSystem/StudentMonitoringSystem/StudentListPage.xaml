@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:conv="clr-namespace:StudentMonitoringSystem.Converters"
+             x:Class="StudentMonitoringSystem.StudentListPage">
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:ImageSelectionConverter x:Key="SelectionConverter"></conv:ImageSelectionConverter>
+           
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+       
+        <AbsoluteLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+           
+            <!--add new user label-->
+            <Label
+                Text="Please click on (+) button to add new student"
+                TextColor="Black"
+                IsVisible="{Binding IsEmpty}"
+                AbsoluteLayout.LayoutBounds=".5, .5"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--list of users-->
+            <ListView
+                ItemsSource="{Binding ListOfStudents}"
+                HasUnevenRows="True"
+                BackgroundColor="White"
+                Margin="0,5,0,0"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                x:Name="studentsListView"
+                ItemSelected="OnItemSelected"
+                SeparatorVisibility="None"
+                IsVisible="{Binding IsNotEmpty}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell
+                            x:Name="classItem">
+                                <StackLayout BackgroundColor="#a5d6a7" HorizontalOptions="FillAndExpand" Margin="0,0,0,5">
+                                <!--count number of user-->
+                               
+                                <!--class name-->
+                                <Grid Margin="10,10,10,10"  BackgroundColor="Transparent" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                   
+                                </Grid.RowDefinitions>
+                        
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                     <ColumnDefinition Width="*" />   
+                                </Grid.ColumnDefinitions>
+                                     <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Text="Roll No.:"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"  
+                                        FontAttributes="Bold"
+                                        TextColor="Black"
+                                        VerticalOptions="CenterAndExpand"/>
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Text="{Binding StudentRollNumber}"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"  
+                                        HorizontalOptions="StartAndExpand"
+                                        TextColor="Black"
+                                        VerticalOptions="CenterAndExpand"/>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="Student Name:"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"  
+                                        FontAttributes="Bold"
+                                        TextColor="Black"
+                                        VerticalOptions="CenterAndExpand"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Text="{Binding StudentName}"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"  
+                                        HorizontalOptions="StartAndExpand"
+                                        TextColor="Black"
+                                        VerticalOptions="CenterAndExpand"/>
+
+                                         <Label
+                                            Grid.Row="2"
+                                            Grid.Column="0"
+                                            Text="Father Name:"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="14"  
+                                            FontAttributes="Bold"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand"/>
+                                        <Label
+                                            Grid.Row="2"
+                                            Grid.Column="1"
+                                            Text="{Binding FatherName}"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="14"  
+                                            HorizontalOptions="StartAndExpand"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand"/>
+
+                                         <Label
+                                            Grid.Row="3"
+                                            Grid.Column="0"
+                                            Text="Cell No:"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="14"  
+                                            FontAttributes="Bold"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand"/>
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="{Binding CellNo}"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="14"  
+                                            HorizontalOptions="StartAndExpand"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand"/>
+                                        <StackLayout 
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            Grid.RowSpan="4"
+                                            Grid.Column="1">
+                                            <Image
+                                                Source="{Binding IsSelected,Converter={StaticResource SelectionConverter}}" 
+
+                                                HeightRequest="40"
+                                                WidthRequest="40">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                        Command="{Binding SelectStudentCommand}"
+                                                                      BindingContext="{Binding Source={x:Reference studentsListView}, Path=BindingContext}"
+                                                                      CommandParameter="{Binding Source={x:Reference classItem}, Path=BindingContext}">
+
+                                                            </TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+
+                                            <Image
+                                                Source="ic_phone" 
+                                                HeightRequest="50"
+                                                WidthRequest="50">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                        Command="{Binding PhoneCommand}"
+                                                                      BindingContext="{Binding Source={x:Reference studentsListView}, Path=BindingContext}"
+                                                                      CommandParameter="{Binding Source={x:Reference classItem}, Path=BindingContext}">
+
+                                                            </TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        
+                                        </StackLayout>
+                                         
+                                </Grid>
+
+                                <!--delete icon-->
+                               <!-- <Image
+                                    Grid.Column="2"
+                                    Source="delete" 
+                                    HeightRequest="{StaticResource MediumDim}"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    BindingContext="{Binding Source={x:Reference usersListView}, Path=BindingContext}"
+                                    WidthRequest="{StaticResource MediumDim}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding DeleteCommand}" CommandParameter="{Binding Source={x:Reference userItem},Path=BindingContext}"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="StudentMonitoringSystem.AddNewStudentPage">
+    <ContentPage.Content>
+        <StackLayout             
+             Orientation="Vertical"
+              HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="White"
+             x:Name="TaskInputPanel">
+
+         <Entry Placeholder="Enter student name" TextColor="Black" Text="{Binding StudentName}" HeightRequest="50" FontSize="14"  />
+         <Entry Placeholder="Enter father name" TextColor="Black" Text="{Binding FatherName}" HeightRequest="50" FontSize="14"  />
+         <Entry Placeholder="Enter cell number" TextColor="Black" Text="{Binding CellNumber}" HeightRequest="50" FontSize="14"  />
+         <Entry Placeholder="Enter roll number" TextColor="Black" Text="{Binding RollNumber}" HeightRequest="50" FontSize="14"  />
+
+        <Button Text="Save Student" Margin="30,10,30,0" Command="{Binding AddNewStudentCommand}" HeightRequest="50" HorizontalOptions="FillAndExpand" FontSize="18" TextColor="White" 
+                CornerRadius="20" BackgroundColor="Teal"/>
+       
+       
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

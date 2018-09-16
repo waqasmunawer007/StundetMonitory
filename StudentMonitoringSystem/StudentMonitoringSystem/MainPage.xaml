@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="GES OTHIAN"
+             xmlns:local="clr-namespace:StudentMonitoringSystem" x:Class="StudentMonitoringSystem.MainPage">
+    <ContentPage.Content>
+         <AbsoluteLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+           
+            <!--add new user label-->
+            <Label
+                Text="Please click on (+) button to add new class"
+                TextColor="Black"
+                IsVisible="{Binding IsEmpty}"
+                AbsoluteLayout.LayoutBounds=".5, .5"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--list of users-->
+            <ListView
+                ItemsSource="{Binding ListOfClasses}"
+                HasUnevenRows="True"
+                BackgroundColor="White"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                Margin="0,5,0,0"
+                x:Name="usersListView"
+                ItemSelected="OnUserItemSelected"
+                SeparatorVisibility="None"
+                IsVisible="{Binding IsNotEmpty}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell
+                            x:Name="classItem">
+                                <StackLayout HeightRequest="50" BackgroundColor="#a5d6a7" HorizontalOptions="FillAndExpand" Margin="0,0,0,5">
+                                <!--count number of user-->
+                               
+                                <!--class name-->
+                                <Label
+                                    Text="{Binding ClassName}"
+                                    VerticalTextAlignment="Center"
+                                    FontSize="22"  
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    HorizontalOptions="CenterAndExpand"
+                                    TextColor="Black"
+                                    VerticalOptions="CenterAndExpand"/>
+                                <!--delete icon-->
+                               <!-- <Image
+                                    Grid.Column="2"
+                                    Source="delete" 
+                                    HeightRequest="{StaticResource MediumDim}"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    BindingContext="{Binding Source={x:Reference usersListView}, Path=BindingContext}"
+                                    WidthRequest="{StaticResource MediumDim}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding DeleteCommand}" CommandParameter="{Binding Source={x:Reference userItem},Path=BindingContext}"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
