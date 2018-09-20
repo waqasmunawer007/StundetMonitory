@@ -1,4 +1,4 @@
-﻿eusing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +9,7 @@ using StudentMonitoringSystem.Model;
 using StudentMonitoringSystem.ViewModels;
 using Xamarin.Forms;
 using Rg.Plugins.Popup.Extensions;
+using StudentMonitoringSystem.Services;
 
 namespace StudentMonitoringSystem
 {
@@ -27,7 +28,7 @@ namespace StudentMonitoringSystem
                 await Navigation.PushPopupAsync(new AddNewClassPopup(),true);
 
             }));
-
+            DependencyService.Get<IXLFile>().ReadXLFile();
             //var smsMessenger = CrossMessaging.Current.SmsMessenger;
             //if (smsMessenger.CanSendSms)
                 //smsMessenger.SendSms("+923456866919","Well hello there from Xam.Messaging.Plugin");

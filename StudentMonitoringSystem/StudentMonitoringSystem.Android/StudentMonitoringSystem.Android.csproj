@@ -75,6 +75,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DependencyServices\DBConnection_Android.cs" />
+    <Compile Include="DependencyServices\XLFileService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -117,6 +118,10 @@
       <Project>{01AEBA6F-AAFF-46CA-A108-0B9F3E03AB1D}</Project>
       <Name>StudentMonitoringSystem</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="data.xlsx" />
+    <EmbeddedResource Include="records.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
