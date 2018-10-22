@@ -99,6 +99,32 @@ namespace StudentMonitoringSystem.Database
         #endregion
 
         #region Student CRUD operations
+
+        public Student GetStudentById(string studentId)
+        {
+            try
+            {
+                lock (_collisionLock)
+                {
+                    if (studentId != null)
+
+                    {
+                        Student student = database.Table<Student>().First(x => x.StudentId == studentId);
+                        return student;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Application.Current.MainPage.DisplayAlert("", ex.Message, "OK");
+                return null;
+            }
+        }
+
         /// <summary>
         /// Adds the new student.
         /// </summary>

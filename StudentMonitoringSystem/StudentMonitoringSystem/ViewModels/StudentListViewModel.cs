@@ -69,6 +69,50 @@ namespace StudentMonitoringSystem.ViewModels
             }
 
         }
+        public void EditPhoneNumber(string studentId,string phoneNumber)
+        {
+            try
+            {
+                Student student = DatabaseHelper.GetInstance().GetStudentById(studentId);
+                student.CellNo = phoneNumber;
+                DatabaseHelper.GetInstance().UpdateStudent(student);
+
+                for (int i = 0; i < ListOfStudents.Count; i++)
+                {
+                    if (studentId.Equals(ListOfStudents[i].StudentId))
+                    {
+                        Student st = ListOfStudents[i];
+                        st.CellNo = phoneNumber;
+                        ListOfStudents[i] = st;
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+            }
+
+        }
+        public void DeleteStudent(string studentId)
+        {
+            try{
+                DatabaseHelper.GetInstance().DeleteStudent(studentId);
+                for (int i = 0; i < ListOfStudents.Count; i++) 
+                {
+                    if(studentId.Equals(ListOfStudents[i].StudentId))
+                    {
+                        ListOfStudents.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+            }
+
+        }
         public void UpdateStudentList(Student newStudent)
         {
             IsEmpty = false;

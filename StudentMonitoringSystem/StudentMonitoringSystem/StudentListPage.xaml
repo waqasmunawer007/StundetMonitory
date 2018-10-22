@@ -182,6 +182,13 @@
                                     </Image.GestureRecognizers>
                                 </Image>-->
                             </StackLayout>
+                             <ViewCell.ContextActions>
+                               <!--delete  action button-->
+                                <MenuItem Clicked="DeleteStudentContextual_Clicked" Text="Delete" CommandParameter="{Binding  StudentId}"/>
+                                 <!--edit  action button-->
+                                <MenuItem  Clicked="EditStudentContextual_Clicked" Text="Edit"  CommandParameter="{Binding  StudentId}" />
+                                
+                            </ViewCell.ContextActions>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

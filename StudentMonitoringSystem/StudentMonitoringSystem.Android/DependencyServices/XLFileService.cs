@@ -41,14 +41,12 @@ namespace StudentMonitoringSystem.Droid.DependencyServices
                     student.StudentName = worksheet[i, 2].DisplayText;
                     student.FatherName = worksheet[i, 3].DisplayText;
                     student.CellNo = "+92"+worksheet[i, 4].DisplayText;
-                    student.ClassId = "acedd98e-a255-480b-add0-5c3988ca0826";
+                    student.ClassId = "af4c88d2-bd08-48bf-864b-39fcd5f0f6c3";
                     student.ClassName = "Eight";
                     student.StudentId = Guid.NewGuid().ToString();
 
                     students.Add(student);
                     DatabaseHelper.GetInstance().AddNewStudent(student);
-
-                  
                 }
                 int count = students.Count;
                 //DatabaseHelper.GetInstance().AddNewStudent(null);
