@@ -21,11 +21,13 @@
   background-color: #FFC119; /* Secondary color */
   color: #ffffff; /* Text color */
 }
-
-/* User Message */
-.vfrc-message {
-  background-color: #030F40; /* Secondary color */
-  color: #ffffff; /* Text color */
+/* Targeted styling for just the User messages */
+.vfrc-user-response .vfrc-message {
+  background-color: #007bff; /* Change to your desired background color */
+  color: #ffffff; /* Change to your desired text color */
+  padding: 10px; /* Add some padding for better readability */
+  border-radius: 8px; /* Optional: Makes the message bubble rounded */
+  font-size: 14px; /* Adjust text size */
 }
 
 /* Send Message Button */
