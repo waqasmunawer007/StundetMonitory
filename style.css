@@ -6,10 +6,10 @@
   text-align: center;
 }
 
-.vfrc-chat {
+/* .vfrc-chat {
   width: 1200px; /* Set your desired width */
   height: 600px; /* Set your desired height */
-}
+} */
 
 /* Agent Message */
 .vfrc-system-response .vfrc-message {
