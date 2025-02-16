@@ -23,7 +23,7 @@
 }
 
 /* User Message */
-.vfrc-user-response .vfrc-message {
+.vfrc-user-response {
   background-color: #030F40; /* Secondary color */
   color: #ffffff; /* Text color */
 }
