@@ -1,0 +1,54 @@
+/* Chatbot Header and System Message Background */
+.vfrc-header, .vfrc-system-message {
+  background-color: #030f40; /* Main website color */
+  color: #ffffff; /* Text color */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Chatbot Container */
+.vfrc-chat-container {
+  width: 400px; /* Set desired width */
+  height: 600px; /* Set desired height */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Agent Message */
+.vfrc-agent-message {
+  background-color: #543cdf; /* Secondary color */
+  color: #ffffff; /* Text color */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+/* User Message */
+.vfrc-user-message {
+  background-color: #ffc119; /* Third color */
+  color: #030f40; /* Text color */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  text-align: right;
+}
+
+/* Send Message Button */
+.vfrc-send-button {
+  background-color: #543cdf; /* Secondary color */
+  color: #ffffff; /* Text color */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.vfrc-send-button:hover {
+  background-color: #030f40; /* Main website color on hover */
+}
+
+/* Input Placeholder */
+.vfrc-input-placeholder {
+  color: #888888; /* Placeholder text color */
+}
