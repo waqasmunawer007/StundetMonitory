@@ -6,21 +6,9 @@
   text-align: center;
 }
 
-/* Force the chat window width */
 .vfrc-chat {
-  width: 700px !important; /* Adjust width as needed */
-  max-width: 90% !important; /* Ensure it remains responsive */
-  height: 500px !important; /* Adjust height if necessary */
-}
-
-/* Ensure the chat dialog container expands */
-.vfrc-chat--dialog {
-  width: 100% !important;
-}
-
-/* If the chat container has a flex layout, adjust it */
-.vfrc-chat--spacer {
-  flex-grow: 1 !important;
+  width: 800px; /* Set your desired width */
+  height: 600px; /* Set your desired height */
 }
 
 /* Agent Message */
