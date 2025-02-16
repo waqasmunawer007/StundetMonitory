@@ -8,14 +8,12 @@
 
 /* Chatbot Container */
 .vfrc-chat-container {
- 
-  max-width: 800px;
+  max-width: 10000px;
   max-height: 600px;
   width: 100%; /* Makes it responsive */
   height: auto; /* Adjusts height dynamically */
   border: 1px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 /* Agent Message */
