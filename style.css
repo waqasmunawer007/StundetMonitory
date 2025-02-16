@@ -17,7 +17,7 @@
 }
 
 /* Agent Message */
-.vfrc-agent-message {
+.vfrc-system-response .vfrc-message {
   background-color: #030f40; /* Secondary color */
   color: #ffffff; /* Text color */
   padding: 10px;
