@@ -18,6 +18,12 @@
     background-color: #030f40; /* Main website color */
     color: #ffffff; /* Text color */
 }
+
+.vfrc-chat-container .vfrc-chat {
+  width: 1000px !important; /* Set your desired width */
+  height: 600px !important; /* Set your desired height */
+}
+
 /* Send Message Button */
 .vfrc-send-button {
   background-color: #543cdf; /* Secondary color */
