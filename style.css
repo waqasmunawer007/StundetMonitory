@@ -21,15 +21,12 @@
   background-color: #FFC119; /* Secondary color */
   color: #ffffff; /* Text color */
 }
-/* Targeted styling for just the User messages */
-.vfrc-user-response .vfrc-message {
-  background-color: #007bff; /* Change to your desired background color */
-  color: #ffffff; /* Change to your desired text color */
-  padding: 10px; /* Add some padding for better readability */
-  border-radius: 8px; /* Optional: Makes the message bubble rounded */
-  font-size: 14px; /* Adjust text size */
+._17c0nw41 {
+    background-color: #0bf49e;
+    color: var(--bcqms80);
+    background-color: #030f40; /* Main website color */
+    color: #ffffff; /* Text color */
 }
-
 /* Send Message Button */
 .vfrc-send-button {
   background-color: #543cdf; /* Secondary color */
