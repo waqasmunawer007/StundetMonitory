@@ -23,10 +23,9 @@
 }
 
 /* User Message */
- .vfrc-user-response .vfrc-message {
-  background-color: #030f40; /* Third color */
+.vfrc-user-response .vfrc-message {
+  background-color: #030f40; /* Secondary color */
   color: #ffffff; /* Text color */
-  padding: 10px;
 }
 
 /* Send Message Button */
