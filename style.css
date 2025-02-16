@@ -9,7 +9,7 @@
 /* Chatbot Container */
 .vfrc-chat-container {
   width: 800px; /* Set desired width */
-  height: 400px; /* Set desired height */
+  height: 200px; /* Set desired height */
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -17,7 +17,7 @@
 
 /* Agent Message */
 .vfrc-agent-message {
-  background-color: #543cdf; /* Secondary color */
+  background-color: #030f40; /* Secondary color */
   color: #ffffff; /* Text color */
   padding: 10px;
   border-radius: 5px;
