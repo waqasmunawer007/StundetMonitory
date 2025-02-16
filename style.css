@@ -20,9 +20,6 @@
 .vfrc-system-response .vfrc-message {
   background-color: #030f40; /* Secondary color */
   color: #ffffff; /* Text color */
-  padding: 10px;
-  border-radius: 5px;
-  margin: 5px 0;
 }
 
 /* User Message */
@@ -30,9 +27,6 @@
   background-color: #030f40; /* Third color */
   color: #ffffff; /* Text color */
   padding: 10px;
-  border-radius: 5px;
-  margin: 5px 0;
-  text-align: right;
 }
 
 /* Send Message Button */
