@@ -6,14 +6,16 @@
   text-align: center;
 }
 
-/* Chatbot Container */
-.vfrc-chat-container {
-  max-width: 10000px;
-  max-height: 600px;
-  width: 100%; /* Makes it responsive */
-  height: auto; /* Adjusts height dynamically */
-  border: 1px solid #ccc;
-  border-radius: 8px;
+/* Adjust chat window width */
+.vfrc-chat {
+  width: 600px; /* Set your desired width */
+  max-width: 90%; /* Ensures responsiveness */
+  height: 400px; /* Adjust height if needed */
+}
+
+/* Ensure the chat dialog container expands */
+.vfrc-chat--dialog {
+  width: 100%; /* Makes sure it takes full width of .vfrc-chat */
 }
 
 /* Agent Message */
