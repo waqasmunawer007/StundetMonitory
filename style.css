@@ -8,14 +8,9 @@
 
 /* Adjust chat window width */
 .vfrc-chat {
-  width: 600px; /* Set your desired width */
+  width: 800px; /* Set your desired width */
   max-width: 90%; /* Ensures responsiveness */
-  height: 400px; /* Adjust height if needed */
-}
-
-/* Ensure the chat dialog container expands */
-.vfrc-chat--dialog {
-  width: 100%; /* Makes sure it takes full width of .vfrc-chat */
+  height: 600px; /* Adjust height if needed */
 }
 
 /* Agent Message */
