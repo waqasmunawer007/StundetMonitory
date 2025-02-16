@@ -1,6 +1,6 @@
 /* Chatbot Header and System Message Background */
 .vfrc-header, .vfrc-system-message {
-  background-color: #ffffff; /* Main website color */
+  background-color: #030f40; /* Main website color */
   color: #ffffff; /* Text color */
   padding: 10px;
   text-align: center;
@@ -26,8 +26,8 @@
 
 /* User Message */
 .vfrc-user-message {
-  background-color: #ffc119; /* Third color */
-  color: #030f40; /* Text color */
+  background-color: #030f40; /* Third color */
+  color: #ffffff; /* Text color */
   padding: 10px;
   border-radius: 5px;
   margin: 5px 0;
