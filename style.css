@@ -8,8 +8,11 @@
 
 /* Chatbot Container */
 .vfrc-chat-container {
-  width: 800px; /* Set desired width */
-  height: 200px; /* Set desired height */
+ 
+  max-width: 800px;
+  max-height: 600px;
+  width: 100%; /* Makes it responsive */
+  height: auto; /* Adjusts height dynamically */
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
