@@ -23,7 +23,11 @@
   width: 1000px !important; /* Set your desired width */
   height: 600px !important; /* Set your desired height */
 }
-
+._1emja3f3 {
+    width: 800px;
+    max-height: 600px;
+    pointer-events: auto;
+}
 /* Send Message Button */
 .vfrc-send-button {
   background-color: #543cdf; /* Secondary color */
