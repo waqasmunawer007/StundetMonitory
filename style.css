@@ -1,5 +1,21 @@
+/* Adjust window size */
 ._1emja3f3 {
     width: 700px;
     max-height: 580px;
     pointer-events: auto;
+}
+
+/* Adjust font size */
+_7rpfil0 {
+    background-color: #f1f2f2;
+    color: #1a1e23;
+    font-family: var(--bcqms8a);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 10px;
+    width: fit-content;
 }
