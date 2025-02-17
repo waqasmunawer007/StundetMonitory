@@ -5,7 +5,7 @@
     pointer-events: auto;
 }
 
-/* Adjust font size */
+/* Adjust system message font size */
 ._7rpfil0 {
     background-color: #f1f2f2;
     color: #1a1e23;
@@ -15,7 +15,24 @@
     flex-direction: column;
     max-width: 100%;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 20px;
     border-radius: 10px;
     width: fit-content;
+}
+/* Adjust user message font size */
+._17c0nw41 {
+    background-color: var(--bcqms85);
+    color: var(--bcqms80);
+    padding: 11px 16px 10px;
+    font-family: var(--bcqms8a);
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    justify-self: flex-end;
+    width: fit-content;
+    max-width: calc(100% - 44px);
+    word-wrap: break-word;
+    border-radius: 10px;
+    margin-left: 44px;
+    animation: _17c0nw40 .08sease-out;
 }
