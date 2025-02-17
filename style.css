@@ -1,48 +1,5 @@
-/* Chatbot Header and System Message Background */
-.vfrc-header, .vfrc-system-message {
-  background-color: #030f40; /* Main website color */
-  color: #ffffff; /* Text color */
-  padding: 10px;
-  text-align: center;
-}
-
-
-/* Agent Message */
-.vfrc-system-response .vfrc-message {
-  background-color: #FFC119; /* Secondary color */
-  color: #ffffff; /* Text color */
-}
-._17c0nw41 {
-    background-color: #0bf49e;
-    color: var(--bcqms80);
-    background-color: #030f40; /* Main website color */
-    color: #ffffff; /* Text color */
-}
-
-.vfrc-chat-container .vfrc-chat {
-  width: 1000px !important; /* Set your desired width */
-  height: 600px !important; /* Set your desired height */
-}
 ._1emja3f3 {
     width: 800px;
     max-height: 600px;
     pointer-events: auto;
-}
-/* Send Message Button */
-.vfrc-send-button {
-  background-color: #543cdf; /* Secondary color */
-  color: #ffffff; /* Text color */
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.vfrc-send-button:hover {
-  background-color: #030f40; /* Main website color on hover */
-}
-
-/* Input Placeholder */
-.vfrc-input-placeholder {
-  color: #888888; /* Placeholder text color */
 }
