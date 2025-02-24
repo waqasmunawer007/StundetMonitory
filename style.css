@@ -1,15 +1,25 @@
-/* Adjust window size */
-._1emja3f3 {
-    width: 700px;
-    max-height: 580px;
-    pointer-events: auto;
-}
 /* Adjust window screen size */
 ._1wkq7nf3 {
     width: 700px;
     max-height: 580px;
     pointer-events: auto;
 }
+/* 📱 Mobile Devices (up to 768px) */
+@media screen and (max-width: 768px) {
+    ._1wkq7nf3 {
+        width: 90vw; /* 90% of viewport width */
+        max-height: 80vh; /* 80% of viewport height */
+    }
+}
+
+/* 📱 Small Mobile Screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    ._1wkq7nf3 {
+        width: 95vw; /* Almost full width */
+        max-height: 85vh; /* Take more height */
+    }
+}
+
 /* Adjust system message font size */
 ._7rpfil0 {
     background-color: #f1f2f2;
